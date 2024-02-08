@@ -113,7 +113,7 @@ const AddStudent = ({ situation }) => {
                         </>
                     }
 
-                    <label>Roll Number</label>
+                    <label>Student Number</label>
                     <input className="registerInput" type="number" placeholder="Enter student's Roll Number..."
                         value={rollNum}
                         onChange={(event) => setRollNum(event.target.value)}

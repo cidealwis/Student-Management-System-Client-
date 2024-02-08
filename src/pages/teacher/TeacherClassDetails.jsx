@@ -155,13 +155,13 @@ const TeacherClassDetails = () => {
                     {getresponse ? (
                         <>
                             <Box sx={{ display: 'flex', justifyContent: 'flex-end', marginTop: '16px' }}>
-                                No Students Found
+                                No Students 
                             </Box>
                         </>
                     ) : (
                         <Paper sx={{ width: '100%', overflow: 'hidden' }}>
                             <Typography variant="h5" gutterBottom>
-                                Students List:
+                                 List of Student:
                             </Typography>
 
                             {Array.isArray(sclassStudents) && sclassStudents.length > 0 &&
