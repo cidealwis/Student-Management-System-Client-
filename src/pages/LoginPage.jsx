@@ -110,9 +110,11 @@ const LoginPage = ({ role }) => {
                             display: 'flex',
                             flexDirection: 'column',
                             alignItems: 'center',
+                            backgroundColor: '#4f5b66', // #4f5b66
+                            color: '#c0c5ce' // #c0c5ce
                         }}
                     >
-                        <Typography variant="h4" sx={{ mb: 2, color: "#2c2143" }}>
+                        <Typography variant="h4" sx={{ mb: 2 }}>
                             {role} Login
                         </Typography>
                         <Typography variant="h7">
@@ -203,21 +205,12 @@ const LoginPage = ({ role }) => {
                                 type="submit"
                                 fullWidth
                                 variant="contained"
-                                sx={{ mt: 3 }}
-                                style={{ backgroundColor: '#eeeeee', color: '#2c2143' }}
+                                sx={{ mt: 3, backgroundColor: '#a7adba', color: '#343d46' }} // #a7adba • #343d46
                             >
                                 {loader ?
                                     <CircularProgress size={24} color="inherit" />
                                     : "Login"}
                             </Button>
-                            {/* <Button
-                                fullWidth
-                                onClick={guestModeHandler}
-                                variant="outlined"
-                                sx={{ mt: 2, mb: 3, color: "#7f56da", borderColor: "#7f56da" }}
-                            >
-                                Login as Guest
-                            </Button> */}
                             {role === "Admin" &&
                                 <Grid container>
                                     <Grid>
@@ -241,8 +234,7 @@ const LoginPage = ({ role }) => {
                     sx={{
                         backgroundImage: `url(${bgpic})`,
                         backgroundRepeat: 'no-repeat',
-                        backgroundColor: (t) =>
-                            t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
+                        backgroundColor: '#343d46', // #343d46
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                     }}
