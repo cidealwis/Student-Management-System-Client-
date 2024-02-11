@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { SpeedDial, SpeedDialAction, styled } from '@mui/material';
 import TuneIcon from '@mui/icons-material/Tune';
 
@@ -18,17 +18,17 @@ const SpeedDialTemplate = ({ actions }) => {
                 />
             ))}
         </CustomSpeedDial>
-    )
-}
+    );
+};
 
-export default SpeedDialTemplate
+export default SpeedDialTemplate;
 
 const CustomSpeedDial = styled(SpeedDial)`
   .MuiSpeedDial-fab {
-    background-color: #032803;
+    background-color: #123456; /* Change the main background color */
     
     &:hover {
-      background-color: green;
+      background-color: #654321; /* Change the background color on hover */
     }
   }
 `;

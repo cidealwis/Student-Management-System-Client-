@@ -1,3 +1,7 @@
+import React, { useState, useEffect } from 'react';
+import { SpeedDial } from '@mui/material';
+import { styled } from '@mui/system';
+
 const [isMobile, setIsMobile] = useState(false);
 
 useEffect(() => {
@@ -12,13 +16,13 @@ useEffect(() => {
     };
 }, []);
 
-
-
 const StyledSpeedDial = styled(SpeedDial)`
   .MuiSpeedDial-fab {
-    background-color: #240439;
+    background-color: #006600; /* Change the main background color */
     &:hover {
-      background-color: #440080;
+      background-color: #004400; /* Change the background color on hover */
     }
   }
 `;
+
+export default StyledSpeedDial;

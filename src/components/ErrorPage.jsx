@@ -19,8 +19,8 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
-  font-family: "Josefin Sans", sans-serif;
-  color: white;
+  font-family: Arial, sans-serif; /* Change font-family */
+  color: #333; /* Change font color */
   background-image: url('https://images.pexels.com/photos/593158/pexels-photo-593158.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')
 `;
 
@@ -34,12 +34,13 @@ const Heading = styled.h1`
   margin-bottom: 40px;
   font-size: 32px;
   font-weight: bold;
-  color: rgb(77, 9, 9);
+  color: #555; /* Change heading color */
 `;
 
 const Text = styled.p`
   font-size: 18px;
   line-height: 1.5;
+  color: #666; /* Change text color */
 `;
 
 export default ErrorPage;
