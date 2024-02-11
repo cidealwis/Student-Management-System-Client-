@@ -110,8 +110,8 @@ const LoginPage = ({ role }) => {
                             display: 'flex',
                             flexDirection: 'column',
                             alignItems: 'center',
-                            backgroundColor: '#4f5b66', // #4f5b66
-                            color: '#c0c5ce' // #c0c5ce
+                            backgroundColor: '#FDF0D1', // Changed background color
+                            color: '#643843' // Changed text color
                         }}
                     >
                         <Typography variant="h4" sx={{ mb: 2 }}>
@@ -205,7 +205,7 @@ const LoginPage = ({ role }) => {
                                 type="submit"
                                 fullWidth
                                 variant="contained"
-                                sx={{ mt: 3, backgroundColor: '#a7adba', color: '#343d46' }} // #a7adba • #343d46
+                                sx={{ mt: 3, backgroundColor: '#AC7D88', color: '#FDF0D1' }} // Changed button color
                             >
                                 {loader ?
                                     <CircularProgress size={24} color="inherit" />
@@ -234,7 +234,7 @@ const LoginPage = ({ role }) => {
                     sx={{
                         backgroundImage: `url(${bgpic})`,
                         backgroundRepeat: 'no-repeat',
-                        backgroundColor: '#343d46', // #343d46
+                        backgroundColor: '#85586F', // Changed background color
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                     }}
