@@ -1,10 +1,8 @@
-// Import necessary modules from React, React Router DOM, and Material-UI
-//import React from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Grid, Box } from '@mui/material';
 import { LightPurpleButton } from '../components/buttonStyles';
 import Students from "../assets/Background.png";
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 // Homepage component
 const Homepage = () => {
@@ -12,7 +10,7 @@ const Homepage = () => {
         <StyledContainer>
             <Grid container spacing={0}>
                 <Grid item xs={12} md={6}>
-                    <img src={Students} alt="students" style={{ width: '100%' }} />
+                    <StyledImage src={Students} alt="students" />
                 </Grid>
                 <Grid item xs={12} md={6}>
                     <StyledPaper elevation={3}>
@@ -39,13 +37,6 @@ const Homepage = () => {
                                     Login
                                 </LightPurpleButton>
                             </StyledLink>
-                            {/* <StyledLink to="/chooseasguest">
-                                <Button variant="outlined" fullWidth
-                                    sx={{ mt: 2, mb: 3, color: "#7f56da", borderColor: "#7f56da" }}
-                                >
-                                    Login as Guest
-                                </Button>
-                            </StyledLink> */}
                             <StyledText>
                                 Do not have an account?{' '}
                                 <Link to="/Adminregister" style={{color:"#550080"}}>
@@ -61,6 +52,17 @@ const Homepage = () => {
 };
 
 // Styled components
+const fadeInAnimation = keyframes`
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+`;
+
+const cartoonAnimation = keyframes`
+  0% { transform: rotate(0); }
+  50% { transform: rotate(-5deg); }
+  100% { transform: rotate(0); }
+`;
+
 const StyledContainer = styled(Container)`
   display: flex;
   justify-content: center;
@@ -71,6 +73,9 @@ const StyledContainer = styled(Container)`
 const StyledPaper = styled.div`
   padding: 24px;
   height: 100vh;
+  background-color: #343d46;
+  color: #c0c5ce;
+  animation: ${fadeInAnimation} 1s ease-in-out;
 `;
 
 const StyledBox = styled(Box)`
@@ -84,11 +89,11 @@ const StyledBox = styled(Box)`
 
 const StyledTitle = styled.h1`
   font-size: 3rem;
-  color: #252525;
   font-weight: bold;
   padding-top: 0;
   letter-spacing: normal;
   line-height: normal;
+  animation: ${cartoonAnimation} 5s infinite;
 `;
 
 const StyledText = styled.p`
@@ -100,6 +105,10 @@ const StyledText = styled.p`
 
 const StyledLink = styled(Link)`
   text-decoration: none;
+`;
+
+const StyledImage = styled.img`
+  width: 100%;
 `;
 
 export default Homepage;
