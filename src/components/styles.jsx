@@ -11,19 +11,19 @@ const drawerWidth = 240;
 
 export const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
-        backgroundColor: '#ff0000', // Change the background color of table header
-        color: '#ffffff', // Change the text color of table header
-        fontWeight: 'bold', // Change font weight of table header
+        backgroundColor: '#eeeeee', // Background color for table header
+        color: '#000000', // Text color of table header
+        fontWeight: 'bold', // Font weight of table header
     },
     [`&.${tableCellClasses.body}`]: {
-        fontSize: 16, // Change font size of table body cells
-        color: '#000000', // Change text color of table body cells
+        fontSize: 16, // Font size of table body cells
+        color: '#000000', // Text color of table body cells
     },
 }));
 
 export const StyledTableRow = styled(TableRow)(({ theme }) => ({
     '&:nth-of-type(odd)': {
-        backgroundColor: '#f2f2f2', // Change background color of odd rows
+        backgroundColor: '#dddddd', // Background color of odd rows
     },
     // Add more custom styles here if needed
 }));
@@ -31,7 +31,7 @@ export const StyledTableRow = styled(TableRow)(({ theme }) => ({
 export const AppBar = styled(MuiAppBar, {
     shouldForwardProp: (prop) => prop !== 'open',
 })(({ theme, open }) => ({
-    backgroundColor: '#00ff00', // Change the background color of the app bar
+    backgroundColor: '#cccccc', // Background color for app bar
     zIndex: theme.zIndex.drawer + 1,
     transition: theme.transitions.create(['width', 'margin'], {
         easing: theme.transitions.easing.sharp,
@@ -50,7 +50,7 @@ export const AppBar = styled(MuiAppBar, {
 export const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' })(
     ({ theme, open }) => ({
         '& .MuiDrawer-paper': {
-            backgroundColor: '#0000ff', // Change the background color of the drawer
+            backgroundColor: '#bbbbbb', // Background color for drawer
             position: 'relative',
             whiteSpace: 'nowrap',
             width: drawerWidth,

@@ -174,10 +174,10 @@ export default SubjectForm
 const styles = {
     inputField: {
         '& .MuiInputLabel-root': {
-            color: '#838080',
+            color: '#5e5e5e', // Changed label color
         },
         '& .MuiOutlinedInput-notchedOutline': {
-            borderColor: '#838080',
+            borderColor: '#5e5e5e', // Changed border color
         },
     },
 };

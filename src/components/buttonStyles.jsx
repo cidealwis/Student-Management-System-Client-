@@ -3,12 +3,12 @@ import { Button } from '@mui/material';
 
 export const RedButton = styled(Button)`
   && {
-    background-color: #ff5733; /* Orange */
+    background-color: #6e7f80; /* Dark grayish cyan */
     color: white;
     margin-left: 4px;
     &:hover {
-      background-color: #ff8c66; /* Lighter orange */
-      border-color: #ff704d; /* Darker orange */
+      background-color: #536872; /* Dark slate gray */
+      border-color: #536872; /* Dark slate gray */
       box-shadow: none;
     }
   }
@@ -16,12 +16,12 @@ export const RedButton = styled(Button)`
 
 export const BlackButton = styled(Button)`
   && {
-    background-color: #333333; /* Dark gray */
+    background-color: #536872; /* Dark slate gray */
     color: white;
     margin-left: 4px;
     &:hover {
-      background-color: #555555; /* Darker gray */
-      border-color: #555555; /* Darker gray */
+      background-color: #708090; /* Slate gray */
+      border-color: #708090; /* Slate gray */
       box-shadow: none;
     }
   }
@@ -29,11 +29,11 @@ export const BlackButton = styled(Button)`
 
 export const DarkRedButton = styled(Button)`
   && {
-    background-color: #990000; /* Darker red */
+    background-color: #708090; /* Slate gray */
     color: white;
     &:hover {
-      background-color: #cc0000; /* Red */
-      border-color: #cc0000; /* Red */
+      background-color: #536878; /* Dark slate blue */
+      border-color: #536878; /* Dark slate blue */
       box-shadow: none;
     }
   }
@@ -41,51 +41,51 @@ export const DarkRedButton = styled(Button)`
 
 export const BlueButton = styled(Button)`
   && {
-    background-color: #0066cc; /* Blue */
+    background-color: #536878; /* Dark slate blue */
     color: #fff;
     &:hover {
-      background-color: #0077ff; /* Lighter blue */
+      background-color: #36454f; /* Charcoal */
     }
   }
 `;
 
 export const PurpleButton = styled(Button)`
   && {
-    background-color: #800080; /* Purple */
+    background-color: #6e7f80; /* Dark grayish cyan */
     color: #fff;
     &:hover {
-      background-color: #993399; /* Lighter purple */
+      background-color: #536872; /* Dark slate gray */
     }
   }
 `;
 
 export const LightPurpleButton = styled(Button)`
   && {
-    background-color: #cc99ff; /* Light purple */
+    background-color: #708090; /* Slate gray */
     color: #fff;
     &:hover {
-      background-color: #e6b3ff; /* Lighter purple */
+      background-color: #536878; /* Dark slate blue */
     }
   }
 `;
 
 export const GreenButton = styled(Button)`
   && {
-    background-color: #339933; /* Green */
+    background-color: #536872; /* Dark slate gray */
     color: #fff;
     &:hover {
-      background-color: #66cc66; /* Lighter green */
+      background-color: #708090; /* Slate gray */
     }
   }
 `;
 
 export const BrownButton = styled(Button)`
   && {
-    background-color: #8b4513; /* Brown */
+    background-color: #536878; /* Dark slate blue */
     color: white;
     &:hover {
-      background-color: #a0522d; /* Lighter brown */
-      border-color: #a0522d; /* Lighter brown */
+      background-color: #36454f; /* Charcoal */
+      border-color: #36454f; /* Charcoal */
       box-shadow: none;
     }
   }
@@ -93,10 +93,10 @@ export const BrownButton = styled(Button)`
 
 export const IndigoButton = styled(Button)`
   && {
-    background-color: #4b0082; /* Indigo */
+    background-color: #36454f; /* Charcoal */
     color: white;
     &:hover {
-      background-color: #663399; /* Lighter indigo */
+      background-color: #536878; /* Dark slate blue */
     }
   }
 `;

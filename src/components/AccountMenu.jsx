@@ -29,7 +29,7 @@ const AccountMenu = () => {
                         aria-haspopup="true"
                         aria-expanded={open ? 'true' : undefined}
                     >
-                        <Avatar sx={{ width: 32, height: 32 }}>
+                        <Avatar sx={{ width: 32, height: 32, bgcolor: '#eeeeee' }}>
                             {String(currentUser.name).charAt(0)}
                         </Avatar>
                     </IconButton>
@@ -49,8 +49,8 @@ const AccountMenu = () => {
                 anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
             >
                 <MenuItem>
-                    <Avatar />
-                    <Link to={`/${currentRole}/profile`}>
+                    <Avatar sx={{ bgcolor: '#dddddd' }} />
+                    <Link to={`/${currentRole}/profile`} style={{ color: '#000000' }}>
                         Profile
                     </Link>
                 </MenuItem>
@@ -65,7 +65,7 @@ const AccountMenu = () => {
                     <ListItemIcon>
                         <Logout fontSize="small" />
                     </ListItemIcon>
-                    <Link to="/logout">
+                    <Link to="/logout" style={{ color: '#000000' }}>
                         Logout
                     </Link>
                 </MenuItem>
@@ -95,7 +95,7 @@ const styles = {
             right: 14,
             width: 10,
             height: 10,
-            bgcolor: 'background.paper',
+            bgcolor: '#eeeeee',
             transform: 'translateY(-50%) rotate(45deg)',
             zIndex: 0,
         },

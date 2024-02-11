@@ -407,16 +407,16 @@ export default ViewStudent
 const styles = {
     attendanceButton: {
         marginLeft: "20px",
-        backgroundColor: "#270843",
+        backgroundColor: "#2c0f4e", // Changed background color
         "&:hover": {
-            backgroundColor: "#694412",
+            backgroundColor: "#6d2c96", // Changed hover background color
         }
     },
     styledButton: {
         margin: "20px",
-        backgroundColor: "#bf9000",
+        backgroundColor: "#5b5b5b", // Changed background color
         "&:hover": {
-            backgroundColor: "#7f6000",
+            backgroundColor: "#3c3c3c", // Changed hover background color
         }
     }
 }
