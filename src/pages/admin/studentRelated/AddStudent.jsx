@@ -6,11 +6,16 @@ import Popup from '../../../components/Popup';
 import { underControl } from '../../../redux/userRelated/userSlice';
 import { getAllSclasses } from '../../../redux/sclassRelated/sclassHandle';
 import { CircularProgress } from '@mui/material';
+import emailjs from 'emailjs-com';
+
+const YOUR_SERVICE_ID = 'service_8rnun1h';
+const YOUR_TEMPLATE_ID = 'template_d6hxumd';
+const YOUR_USER_ID = 'hN_rhuaImmyRvw2hu';
 
 const AddStudent = ({ situation }) => {
-    const dispatch = useDispatch()
-    const navigate = useNavigate()
-    const params = useParams()
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const params = useParams();
 
     const userState = useSelector(state => state.user);
     const { status, currentUser, response, error } = userState;
@@ -18,13 +23,14 @@ const AddStudent = ({ situation }) => {
 
     const [name, setName] = useState('');
     const [rollNum, setRollNum] = useState('');
-    const [password, setPassword] = useState('')
-    const [className, setClassName] = useState('')
-    const [sclassName, setSclassName] = useState('')
+    const [password, setPassword] = useState('');
+    const [email, setEmail] = useState('');
+    const [className, setClassName] = useState('');
+    const [sclassName, setSclassName] = useState('');
 
-    const adminID = currentUser._id
-    const role = "Student"
-    const attendance = []
+    const adminID = currentUser._id;
+    const role = "Student";
+    const attendance = [];
 
     useEffect(() => {
         if (situation === "Class") {
@@ -34,7 +40,7 @@ const AddStudent = ({ situation }) => {
 
     const [showPopup, setShowPopup] = useState(false);
     const [message, setMessage] = useState("");
-    const [loader, setLoader] = useState(false)
+    const [loader, setLoader] = useState(false);
 
     useEffect(() => {
         dispatch(getAllSclasses(adminID, "Sclass"));
@@ -53,17 +59,34 @@ const AddStudent = ({ situation }) => {
         }
     }
 
-    const fields = { name, rollNum, password, sclassName, adminID, role, attendance }
+    const fields = { name, rollNum, password, email, sclassName, adminID, role, attendance };
 
-    const submitHandler = (event) => {
+    const submitHandler = async (event) => {
         event.preventDefault()
         if (sclassName === "") {
             setMessage("Please select a classname")
             setShowPopup(true)
         }
         else {
-            setLoader(true)
-            dispatch(registerUser(fields, role))
+            setLoader(true);
+            try {
+                await emailjs.send(
+                    YOUR_SERVICE_ID,
+                    YOUR_TEMPLATE_ID,
+                    {
+                        to_name: name,
+                        to_email: email,
+                        message: `Class Name: ${className}\nStudent Number: ${rollNum}\nPassword: ${password}`,
+                        html: true // Set html option to true
+                    },
+                    YOUR_USER_ID
+                );
+                dispatch(registerUser(fields, role));
+            } catch (error) {
+                console.error('Error sending email:', error);
+                setMessage('Error sending email. Please try again later.');
+                setLoader(false);
+            }
         }
     }
 
@@ -113,6 +136,12 @@ const AddStudent = ({ situation }) => {
                         </>
                     }
 
+                    <label>Email</label>
+                    <input className="registerInput" type="email" placeholder="Enter student's email..."
+                        value={email}
+                        onChange={(event) => setEmail(event.target.value)}
+                        autoComplete="email" required />
+
                     <label>Student Number</label>
                     <input className="registerInput" type="number" placeholder="Enter student's Roll Number..."
                         value={rollNum}
@@ -139,4 +168,4 @@ const AddStudent = ({ situation }) => {
     )
 }
 
-export default AddStudent
+export default AddStudent;

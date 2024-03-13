@@ -39,7 +39,7 @@ const Homepage = () => {
                             </StyledLink>
                             <StyledText>
                                 Do not have an account?{' '}
-                                <Link to="/Adminregister" style={{color:"#550080"}}>
+                                <Link to="/Adminregister" style={{color:"#ffffff"}}>
                                     Sign up
                                 </Link>
                             </StyledText>
